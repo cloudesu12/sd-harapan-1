@@ -1,0 +1,212 @@
+/* =================== RESET & GLOBAL =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f9fa;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0d6efd;
+}
+
+/* =================== NAVBAR =================== */
+.navbar {
+  background: #0d6efd;
+  transition: background 0.3s ease;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* Efek sentuhan/hover pada menu */
+.nav-link:hover {
+  color: #ffd43b !important;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* =================== HERO SECTION =================== */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hero h2 {
+  font-size: 32px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.btn-custom {
+  background: #ffc107;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 12px 30px;
+  transition: 0.3s;
+  border-radius: 30px; /* Membuat tombol elips agar lebih modern di HP */
+}
+
+.btn-custom:hover {
+  background: #e0a800;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* =================== COMPONENTS (CARDS) =================== */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: 0.4s ease;
+}
+
+/* Efek interaktif saat disentuh / hover */
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card i {
+  transition: 0.3s ease;
+}
+
+.card:hover i {
+  transform: scale(1.2);
+}
+
+/* =================== SAMBUTAN & GALERI =================== */
+.rounded-circle {
+  border: 8px solid white;
+}
+
+#galeri img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+#galeri img:hover {
+  transform: scale(1.05);
+  border-radius: 12px;
+}
+
+/* =================== FOOTER =================== */
+footer {
+  background: #0d6efd;
+  color: white;
+  padding: 30px;
+}
+
+footer a {
+  transition: 0.2s ease;
+}
+
+footer a:hover {
+  color: #ffc107 !important;
+}
+
+/* ===================================================
+   OPTIMASI INTERAKTIF & RESPONSIF LAYAR HP (Mobile)
+   =================================================== */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 0; /* Jarak section lebih rapat di layar HP */
+  }
+
+  .title {
+    font-size: 28px; /* Judul section sedikit mengecil */
+    margin-bottom: 25px;
+  }
+
+  /* Optimasi teks Hero agar tidak kebesaran di HP */
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* Membuat tampilan menu Navbar drop-down di HP lebih rapi */
+  .navbar-collapse {
+    background: #0d6efd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .navbar-nav .nav-item {
+    text-align: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Penyesuaian gambar Kepala Sekolah di HP */
+  #sambutan img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  /* Mengurangi efek angkat kartu di HP agar saat di-scroll jempol tidak canggung */
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  footer {
+    text-align: center; /* Teks footer rata tengah otomatis saat di HP */
+  }
+}
